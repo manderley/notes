@@ -1,0 +1,47 @@
+html {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	color: #4d4d4d;
+	font-size: 14px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+a {
+	color: #f60;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+body {
+	text-align: left;
+	padding: 0;
+}
+
+header {
+	position: relative;
+	background: #005689;
+	padding: 10px 20px;
+}
+
+h1 {
+	color: #aad8f1;
+}
+
+main {
+	padding: 20px;
+	margin: 0 auto;
+}
+
+ul, ol.instructions--top-level {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol.instructions {
+	margin-left: 40px;
+	padding: 0;
+}
