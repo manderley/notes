@@ -21,7 +21,8 @@
 
       <h2>Introduction</h2>
 
-      <p>This is a brief guide to setting up <a href="http://gulpjs.com/" title="a task runner">gulp</a> and integrating <a href="https://github.com/postcss/postcss" title="a tool for transforming CSS with JS plugins">PostCSS</a> and <a href="http://cssnext.io/" title="a plugin pack, referred to as a 'post-processor' or 'transpiler', which converts future CSS into current CSS">cssnext</a>. It requires that <a href="https://nodejs.org" title="a JavaScript runtime">Node</a> is already installed.</p>
+      <p>This is a bare bones guide to setting up <a href="http://gulpjs.com/" title="a task runner">gulp</a> and integrating <a href="https://github.com/postcss/postcss" title="a tool for transforming CSS with JS plugins">PostCSS</a> and <a href="http://cssnext.io/" title="a plugin pack, referred to as a 'post-processor' or 'transpiler', which converts future CSS into current CSS">cssnext</a>. To find out more about these tools and why you might want to use them, see the <a href="#resources">resources</a> below.</p>
+      <p>The following instructions require that <a href="https://nodejs.org" title="a JavaScript runtime">Node</a> is already installed.</p>
 
     </section>
 
@@ -64,7 +65,7 @@ gulp.task('default', function() {
 $ npm install --save-dev cssnext</code></pre>
             </li>
             
-            <li>Add to <strong>gulpfile.js</strong>, so content of file would now be something like::
+            <li>Add to <strong>gulpfile.js</strong>, so content of file would now be something like:
               <pre><code class="language-javascript">var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var cssnext = require('cssnext');
@@ -98,7 +99,7 @@ gulp.task('default', ['styles', 'watch']);
 
     <section>
 
-      <h2>Resources</h2>
+      <h2 id="resources">Resources</h2>
 
       <h3>Articles</h3>
 
