@@ -6,6 +6,8 @@
   <meta name="description" content="A guide to setting up task runner gulp, along with PostCSS framework and cssnext plugin">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="prism.css">
+  <script src="prism.js"></script>
 </head>
 <body>
   
@@ -32,24 +34,24 @@
           <h3>Installing gulp</h3>
           <ol class="instructions">
             <li>Install <strong>gulp</strong> globally:
-              <pre><code>$ npm install gulp -g</code></pre>
+              <pre><code class="language-bash">$ npm install gulp -g</code></pre>
             </li>
             <li>In root of project, create <strong>package.json</strong> file. Create manually or run:
-              <pre><code>$ npm init</code></pre>
+              <pre><code class="language-bash">$ npm init</code></pre>
             </li>
             <li>Install gulp in your project <strong>devDependencies</strong>:
-              <pre><code>$ npm install --save-dev gulp</code></pre>
+              <pre><code class="language-bash">$ npm install --save-dev gulp</code></pre>
             </li>
             <li>In root of project create <strong>gulpfile.js</strong> with initial content:
-              <pre><code>var gulp = require('gulp');
+              <pre><code class="language-javascript">var gulp = require('gulp');
 
 gulp.task('default', function() {
-  // code for default task will go here, add a console log just for initial testing:
+  // code for default task will go here, add a console log for initial testing:
   console.log('testing gulp default task');
 });</code></pre>
             </li>
             <li>To test, run gulp:
-              <pre><code>$ gulp</code></pre>
+              <pre><code class="language-bash">$ gulp</code></pre>
             </li>
           </ol>
 
@@ -58,12 +60,12 @@ gulp.task('default', function() {
           <h3>Installing and integrating PostCSS and cssnext</h3>
           <ol class="instructions">
             <li>Install <strong>gulp-postcss</strong> and <strong>cssnext</strong> plugins to project:
-              <pre><code>$ npm install --save-dev gulp-postcss
+              <pre><code class="language-bash">$ npm install --save-dev gulp-postcss
 $ npm install --save-dev cssnext</code></pre>
             </li>
             
             <li>Add to <strong>gulpfile.js</strong>, so content of file would now be something like::
-              <pre><code>var gulp = require('gulp');
+              <pre><code class="language-javascript">var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var cssnext = require('cssnext');
 
