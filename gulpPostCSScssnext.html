@@ -6,7 +6,7 @@
   <meta name="description" content="A guide to setting up task runner gulp, along with PostCSS framework and cssnext plugin">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="prism-min.css">
+  <link rel="stylesheet" href="prism.css">
   <script src="prism-min.js"></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <h2>Introduction</h2>
 
       <p>This is a bare bones guide to setting up <a href="http://gulpjs.com/" title="a task runner">gulp</a> and integrating <a href="https://github.com/postcss/postcss" title="a tool for transforming CSS with JS plugins">PostCSS</a> and <a href="http://cssnext.io/" title="a plugin pack, referred to as a 'post-processor' or 'transpiler', which converts future CSS into current CSS">cssnext</a>. To find out more about these tools and why you might want to use them, see the <a href="#resources">resources</a> below.</p>
-      <p>The following instructions require that <a href="https://nodejs.org" title="a JavaScript runtime">Node</a> is already installed.</p>
+      <p>The following instructions assume that <a href="https://nodejs.org" title="a JavaScript runtime">Node</a> is already installed.</p>
 
     </section>
 
@@ -85,9 +85,9 @@ gulp.task('styles', function() {
     })
   ];
 
-  return gulp.src('./css/main.css') // specify our source file
-    .pipe(postcss(processors)) // use postcss function, passing array of processors
-    .pipe(gulp.dest('./dest')); // specify our destination directory for transformed CSS
+  return gulp.src('./css/main.css') // specify source file
+    .pipe(postcss(processors)) // use postcss function, passing processors array
+    .pipe(gulp.dest('./dest')); // specify destination directory for transformed CSS
 
 });
 

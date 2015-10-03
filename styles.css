@@ -1,9 +1,13 @@
 html {
-	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-family: georgia, serif;
 	color: #4d4d4d;
 	font-size: 14px;
 	text-align: center;
 	box-sizing: border-box;
+}
+
+h1, h2, h3 {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 a {
