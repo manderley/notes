@@ -4,10 +4,8 @@
   <title>Getting started with Gulp, PostCSS and cssnext</title>
   <meta charset="utf-8">
   <meta name="description" content="A guide to setting up task runner gulp, along with PostCSS framework and cssnext plugin">
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="prism.css">
-  <script src="prism-min.js"></script>
+  <link rel="stylesheet" href="dist/css/main.css">
+  <script src="js/prism-min.js"></script>
 </head>
 <body>
   
@@ -87,7 +85,7 @@ gulp.task('styles', function() {
 
   return gulp.src('./css/main.css') // specify source file
     .pipe(postcss(processors)) // use postcss function, passing processors array
-    .pipe(gulp.dest('./dest')); // specify destination directory for transformed CSS
+    .pipe(gulp.dest('./dist/css')); // specify destination directory for transformed CSS
 
 });
 

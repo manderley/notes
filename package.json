@@ -1,0 +1,21 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "Notes about technical stuff",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manderley/notes.git"
+  },
+  "author": "Rebecca Edwards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manderley/notes/issues"
+  },
+  "homepage": "https://github.com/manderley/notes#readme",
+  "devDependencies": {
+    "cssnext": "^1.8.4",
+    "gulp": "^3.9.0",
+    "gulp-postcss": "^6.0.0"
+  }
+}
