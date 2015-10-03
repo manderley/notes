@@ -70,22 +70,34 @@ $ npm install --save-dev cssnext</code></pre>
 var postcss = require('gulp-postcss');
 var cssnext = require('cssnext');
 
+// task to use PostCSS and cssnext to process CSS
 gulp.task('styles', function() {
 
+  // define an array of processors to be used by PostCSS
+  // in this case we are only using cssnext
+  // for all cssnext options see http://cssnext.io/usage/
   var processors = [
-    cssnext({})
+    cssnext({
+      'browsers': ['last 2 versions', 'ie 9'],
+      'customProperties': true,
+      'customSelectors': true,
+      'compress': true
+    })
   ];
 
-  return gulp.src('./css/main.css')
-    .pipe(postcss(processors))
-    .pipe(gulp.dest('./dest'));
+  return gulp.src('./css/main.css') // specify our source file
+    .pipe(postcss(processors)) // use postcss function, passing array of processors
+    .pipe(gulp.dest('./dest')); // specify our destination directory for transformed CSS
 
 });
 
+// task to watch for changes to CSS files
 gulp.task('watch', function() {
   gulp.watch('css/*.css', ['styles']);
 });
 
+// default task created in step 4 of 'Installing gulp' above, now modified to call the 'styles' and 'watch' tasks
+// this is the task that runs automatically when you run the gulp command
 gulp.task('default', ['styles', 'watch']);
                 </code>
               </pre>
@@ -111,12 +123,13 @@ gulp.task('default', ['styles', 'watch']);
         <li><a href="https://www.chapterthree.com/blog/getting-started-gulp"><i>Getting Started with Gulp</i>, by Casey Wight</a></li>
       </ul>
 
-      <h3>GitHub documentation</h3>
+      <h3>Documentation</h3>
 
       <ul>
         <li><a href="https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md" title="gulp GitHub documentation"><i>Gulp: Getting Started</i></a></li>
         <li><a href="https://github.com/postcss/postcss"><i>PostCSS</i></a></li>
         <li><a href="https://github.com/postcss/gulp-postcss"><i>PostCSS gulp plugin</i></a></li>
+        <li><a href="http://cssnext.io/"><i>cssnext</i></a></li>
       </ul>
 
       <h3>Level Up Tuts video tutorials</h3>
