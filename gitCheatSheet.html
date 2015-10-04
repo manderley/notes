@@ -21,9 +21,14 @@
 
       <ul>
         <li>
-          Create a <strong>new branch</strong>, switch to it, and set upstream configuration
-          <pre><code class="language-bash">$ git checkout -b <branch-name>
-$ git push -u origin <branch-name></code></pre>
+          Create a <strong>new branch</strong>, switch to it, and set upstream configuration (you could also <a href="http://aaronbonner.io/post/80766268890/git-alias-to-simplify-setting-upstream-branch">create an alias to automatically set the upstream branch</a>):
+          <pre><code class="language-none">$ git checkout -b &lt;branch-name&gt;
+$ git push -u origin &lt;branch-name&gt;</code></pre>
+        </li>
+        <li>
+          Integrate changes from one branch to another using <strong>rebase</strong>:
+          <pre><code class="language-none">$ git checkout &lt;branch-without-changes&gt;
+$ git rebase &lt;branch-with-changes&gt;</code></pre>
         </li>
       </ul>
 
@@ -34,7 +39,9 @@ $ git push -u origin <branch-name></code></pre>
       <h2 id="resources">Resources</h2>
 
       <ul>
-        <li><a href="http://git-scm.com/doc"><i>Git documentation</i></a></li>
+        <li><a href="http://git-scm.com/doc"><i>Git documentation home</i></a></li>
+        <li><a href="https://git-scm.com/book/en/v2/Git-Branching-Rebasing"><i>Git documentation: Git Branching - Rebasing</i></a></li>
+        <li><a href="http://lea.verou.me/2011/10/easily-keep-gh-pages-in-sync-with-master/"><i>Easily keep gh-pages in sync with master</i>, Lea Verou</a></li>
         <li><a href="http://aaronbonner.io/post/80766268890/git-alias-to-simplify-setting-upstream-branch"><i>Git Alias to Simplify Setting Upstream Branch</i>, Aaron Bonner</a></li>
       </ul>
 
