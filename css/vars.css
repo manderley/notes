@@ -1,0 +1,8 @@
+/* custom properties */
+
+:root {
+	--mainColour: #4d4d4d;
+}
+
+/* custom selectors */
+@custom-selector :--heading h1, h2, h3;
