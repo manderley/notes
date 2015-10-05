@@ -8,8 +8,6 @@ gulp.task('styles', function() {
   	cssImport,
   	cssnext({
   		'browsers': ['last 2 versions', 'ie 9'],
-      'customProperties': true,
-      'customSelectors': true,
       'compress': true
   	})
   ];
