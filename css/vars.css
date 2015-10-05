@@ -2,7 +2,11 @@
 
 :root {
 	--mainColour: #4d4d4d;
+	--linkColour: #f60;
+	--headerBackgroundColour: #005689;
+	--mainHeadingColour: #aad8f1;
 }
 
 /* custom selectors */
+
 @custom-selector :--heading h1, h2, h3;
