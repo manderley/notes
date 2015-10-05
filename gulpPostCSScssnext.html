@@ -44,8 +44,9 @@
             <li>In root of project create <strong>gulpfile.js</strong> with initial content:
               <pre><code class="language-javascript">var gulp = require('gulp');
 
+// default task - this runs automatically when you run the gulp command
 gulp.task('default', function() {
-  // code for default task will go here, add a console log for initial testing:
+  // add a console log for initial testing:
   console.log('testing gulp default task');
 });</code></pre>
             </li>
@@ -95,7 +96,6 @@ gulp.task('watch', function() {
 });
 
 // default task created in step 4 of 'Installing gulp' above, now modified to call the 'styles' and 'watch' tasks
-// this is the task that runs automatically when you run the gulp command
 gulp.task('default', ['styles', 'watch']);
                 </code>
               </pre>
