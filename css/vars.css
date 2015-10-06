@@ -5,6 +5,9 @@
 	--linkColour: #f60;
 	--headerBackgroundColour: #005689;
 	--mainHeadingColour: #aad8f1;
+	--baseFontSize: 16px;
+	--baseLineHeight: 1.5;
+	--baseUnit: calc(var(--baseFontSize) * var(--baseLineHeight));
 }
 
 /* custom selectors */

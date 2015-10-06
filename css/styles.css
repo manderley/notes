@@ -1,13 +1,23 @@
-html {
-	font-family: georgia, serif;
+body {
+	font: var(--baseFontSize)/var(--baseLineHeight) georgia, serif;
 	color: var(--mainColour);
-	font-size: 14px;
-	text-align: center;
 	box-sizing: border-box;
+	text-align: left;
+	padding: 0;
 }
 
-:--heading {
-	font-family: 'Helvetica Neue', Arial, sans-serif;
+header {
+	background: var(--headerBackgroundColour);
+	padding: var(--baseUnit);
+}
+
+main {
+	padding: var(--baseUnit);
+	margin: 0;
+}
+
+section {
+	margin-bottom: var(--baseUnit);
 }
 
 a {
@@ -19,33 +29,77 @@ a:hover {
 	text-decoration: underline;
 }
 
-body {
-	text-align: left;
-	padding: 0;
-}
-
-header {
-	position: relative;
-	background: var(--headerBackgroundColour);
-	padding: 10px 20px;
+:--heading {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	margin: 0;
 }
 
 h1 {
 	color: var(--mainHeadingColour);
+	font-size: calc(var(--baseFontSize) * 2);
+	font-weight: normal;
 }
 
-main {
-	padding: 20px;
-	margin: 0 auto;
+h2 {
+	font-size: calc(var(--baseFontSize) * 1.5);
+	font-weight: normal;
+	margin-bottom: var(--baseFontSize);
 }
 
-ul, ol.instructions--top-level {
+h3 {
+	font-size: calc(var(--baseFontSize) * 1.2);
+	font-weight: bold;
+	margin-bottom: var(--baseFontSize);
+}
+
+p {
+	margin: 0 0 var(--baseFontSize);
+}
+
+ol {
+	counter-reset: section;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-ol.instructions {
-	margin-left: 20px;
+ol li {
+	margin-bottom: var(--baseUnit);
+}
+
+ol > li::before {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-weight: bold;
+}
+
+ol > li > strong {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+ol.instructions--nested {
+	padding-top: var(--baseFontSize);
+}
+
+ol.instructions--nested strong {
+	font-family: inherit;
+}
+
+ol.instructions--nested li::before {
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+ol.instructions--nested li:last-child {
+	margin-bottom: calc(var(--baseUnit) * 2);
+}
+
+ol li::before {
+	counter-increment: section;
+	content: counters(section,".") " ";
+}
+
+ul {
+	list-style-type: none;
+	margin: 0 0 var(--baseUnit);
 	padding: 0;
 }
