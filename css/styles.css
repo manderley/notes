@@ -44,6 +44,8 @@ h2 {
 	font-size: calc(var(--baseFontSize) * 1.5);
 	font-weight: normal;
 	margin-bottom: var(--baseFontSize);
+	padding-bottom: calc(var(--baseUnit) / 2));
+	border-bottom: 1px solid #ccc;
 }
 
 h3 {
