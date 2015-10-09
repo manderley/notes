@@ -30,8 +30,11 @@ a:hover {
 }
 
 :--heading {
-	font-family: 'Helvetica Neue', Arial, sans-serif;
 	margin: 0;
+}
+
+:--heading, nav {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 h1 {
