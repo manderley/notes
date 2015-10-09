@@ -1,2 +1,2 @@
 # notes
-Notes on technical stuff
+Web dev notes
