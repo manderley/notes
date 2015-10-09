@@ -1,10 +1,23 @@
 /* custom properties */
 
 :root {
+
+	/* colours */
+
 	--mainColour: #4d4d4d;
-	--linkColour: #f60;
-	--headerBackgroundColour: #005689;
 	--mainHeadingColour: #aad8f1;
+	--metaDataColour: #e6e6e6;
+
+	--linkColour: #f60;
+	--navLinkColour: #fff;
+	--navLinkHoverColour: #ccc;
+
+	--headerBackgroundColour: #005689;
+
+	--headingBorderColour: #e6e6e6;
+	
+	/* typography sizing */
+
 	--baseFontSize: 16px;
 	--baseLineHeight: 1.5;
 	--baseUnit: calc(var(--baseFontSize) * var(--baseLineHeight));

@@ -36,6 +36,8 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-right: calc(var(--baseUnit) / 4);
+  vertical-align: baseline;
 }
 
 .icon-home:before {

@@ -8,7 +8,20 @@ body {
 
 header {
 	background: var(--headerBackgroundColour);
-	padding: var(--baseUnit);
+	padding: calc(var(--baseUnit) / 2) var(--baseUnit);
+}
+
+.site-navigation {
+	display: table;
+	width: 100%;
+}
+
+.site-navigation__item {
+	display: table-cell;
+}
+
+.site-navigation__item:last-child {
+	text-align: right;
 }
 
 main {
@@ -29,8 +42,28 @@ a:hover {
 	text-decoration: underline;
 }
 
+.site-navigation {
+	margin-bottom: calc(var(--baseUnit) / 2);
+}
+
+.site-navigation__link {
+	color: var(--navLinkColour);
+	font-size: calc(var(--baseFontSize) / 1.2);
+}
+
+.site-navigation__link:hover {
+	color: var(--navLinkHoverColour);
+	text-decoration: none;
+}
+
+.metadata {
+	color: var(--metaDataColour);
+	font-size: calc(var(--baseFontSize) / 1.2);
+}
+
 :--heading {
 	margin: 0;
+	font-weight: normal;
 }
 
 :--heading, nav {
@@ -40,20 +73,18 @@ a:hover {
 h1 {
 	color: var(--mainHeadingColour);
 	font-size: calc(var(--baseFontSize) * 2);
-	font-weight: normal;
+	margin-bottom: calc(var(--baseFontSize) / 2);
 }
 
 h2 {
 	font-size: calc(var(--baseFontSize) * 1.5);
-	font-weight: normal;
 	margin-bottom: var(--baseFontSize);
-	padding-bottom: calc(var(--baseUnit) / 2));
-	border-bottom: 1px solid #ccc;
+	padding-bottom: calc(var(--baseUnit) / 4));
+	border-bottom: 1px solid var(--headingBorderColour);
 }
 
 h3 {
 	font-size: calc(var(--baseFontSize) * 1.2);
-	font-weight: bold;
 	margin-bottom: var(--baseFontSize);
 }
 
