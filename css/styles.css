@@ -61,6 +61,10 @@ a:hover {
 	font-size: calc(var(--baseFontSize) / 1.2);
 }
 
+time {
+	font-style: italic;
+}
+
 :--heading {
 	margin: 0;
 	font-weight: normal;
@@ -92,14 +96,26 @@ p {
 	margin: 0 0 var(--baseFontSize);
 }
 
-ol {
-	counter-reset: section;
+ul, ol {
 	list-style-type: none;
-	margin: 0;
 	padding: 0;
 }
 
-ol li {
+ul {
+	margin: 0 0 var(--baseUnit);
+}
+
+ol.instructions {
+	counter-reset: section;
+	margin: 0;
+}
+
+ol.instructions li::before {
+	counter-increment: section;
+	content: counters(section,".") " ";
+}
+
+.instructions li {
 	margin-bottom: var(--baseUnit);
 }
 
@@ -129,13 +145,3 @@ ol.instructions--nested li:last-child {
 	margin-bottom: calc(var(--baseUnit) * 2);
 }
 
-ol li::before {
-	counter-increment: section;
-	content: counters(section,".") " ";
-}
-
-ul {
-	list-style-type: none;
-	margin: 0 0 var(--baseUnit);
-	padding: 0;
-}
