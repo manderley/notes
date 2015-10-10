@@ -123,30 +123,22 @@ ol.instructions li::before {
 	content: counters(section,".") " ";
 }
 
+.spaced li,
 .instructions li {
 	margin-bottom: var(--baseUnit);
 }
 
-ol > li::before {
+.instructions__item::before {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	font-weight: bold;
 }
 
-ol > li > strong {
+.instructions__item > strong {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 ol.instructions--nested {
 	padding-top: var(--baseFontSize);
-}
-
-ol.instructions--nested strong {
-	font-family: inherit;
-}
-
-ol.instructions--nested li::before {
-	font-family: inherit;
-	font-weight: inherit;
 }
 
 ol.instructions--nested li:last-child {
