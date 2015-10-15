@@ -1,0 +1,42 @@
+@media (min-width: 400px) {
+	header,
+	main {
+		padding-left: calc(var(--baseUnit) / 1.5);
+		padding-right: calc(var(--baseUnit) / 1.5);
+	}
+}
+
+@media (min-width: 700px) {
+	header,
+	main {
+		padding-left: var(--baseUnit);
+		padding-right: var(--baseUnit);
+	}
+
+	.site-navigation {
+		margin-bottom: calc(var(--baseUnit) / 2);
+	}
+
+	h1 {
+		font-size: calc(var(--baseFontSize) * 1.5);
+	}
+
+	h2 {
+		font-size: calc(var(--baseFontSize) * 1.5);
+	}
+
+	h3 {
+		font-size: calc(var(--baseFontSize) * 1.2);
+	}
+
+	code {
+		font-size: var(--baseFontSize);
+	}
+}
+
+@media (min-width: 900px) {
+	h1 {
+		font-size: calc(var(--baseFontSize) * 2);
+	}
+}
+

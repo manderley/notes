@@ -22,6 +22,10 @@
 	--baseFontSize: 16px;
 	--baseLineHeight: 1.5;
 	--baseUnit: calc(var(--baseFontSize) * var(--baseLineHeight));
+
+	/* other */
+
+	--transitionDuration: 0.5s;
 }
 
 /* custom selectors */
