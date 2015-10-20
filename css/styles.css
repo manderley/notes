@@ -156,3 +156,7 @@ code {
 	transition: font-size var(--transitionDuration);
 }
 
+.nowrap {
+	white-space: nowrap;
+}
+
